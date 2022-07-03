@@ -10,12 +10,21 @@
     @apply bg-[#f8f9fa] py-2 px-6 rounded-md text-sm text-gray-900 hover:ring-1 hover:ring-gray-200 focus:outline-none active:ring-gray-300 hover:shadow-md
   }
   .bottom-menu{
-    @apply flex space-x-6 text-gray-500;
+    @apply flex flex-wrap space-x-6 text-gray-500 flex-grow;
   }
   .row-footer{
-    @apply w-full flex justify-between  text-base  py-3 px-10 border border-b-[1px] border-b-gray-200;
+    @apply w-full flex  flex-wrap justify-between  text-base  py-3 px-10 border border-b-[1px] border-b-gray-200;
   }
   .footer{
     @apply absolute bottom-0 flex flex-col items-center justify-center w-full bg-gray-100 text-sm text-gray-500
+  }
+  .bottom-menu li{
+    @apply text-center mx-auto justify-center flex-grow hover:underline
+  }
+  
+  @media screen(sm){
+    .bottom-menu{
+      @apply flex-nowrap
+    }
   }
 }

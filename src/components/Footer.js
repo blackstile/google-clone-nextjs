@@ -9,7 +9,7 @@ function Footer() {
       </div>
       <div className="row-footer">
         <ul className="bottom-menu">
-          <li className="">
+          <li>
             <a href="#">Sobre</a>
           </li>
           <li>
@@ -19,10 +19,12 @@ function Footer() {
             <a href="#">Negócios</a>
           </li>
           <li>
-            <a href="#">Como funciona a Pesquisa</a>
+            <a href="#" className="hidden md:flex">
+              Como funciona a Pesquisa
+            </a>
           </li>
         </ul>
-        <span className="text-sm">
+        <span className="hidden md:flex text-sm">
           Google Clone Copytright &copy; {new Date().getFullYear()}
         </span>
         <ul className="bottom-menu">
