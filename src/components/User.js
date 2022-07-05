@@ -1,13 +1,13 @@
 import { useSession, signIn, signOut } from 'next-auth/react';
 import Image from 'next/image';
 
-function User() {
+function User({ className }) {
   const { data: session } = useSession();
   if (session) {
     return (
       <>
         <div
-          className="flex relative cursor-pointer items-center justify-center"
+          className={`${className} relative cursor-pointer items-center justify-center flex`}
           onClick={signOut}
         >
           <div className="absolute z-10">

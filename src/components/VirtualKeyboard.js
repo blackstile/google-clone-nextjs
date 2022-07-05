@@ -3,7 +3,7 @@ import React from 'react';
 
 function VirtualKeyboard() {
   return (
-    <div className="w-9 h-6">
+    <div className="w-9 h-6 hidden sm:block">
       <Image
         title="Ferramenta de inserção de texto"
         className="bg-transparent cursor-pointer"

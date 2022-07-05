@@ -19,12 +19,18 @@
     @apply absolute bottom-0 flex flex-col items-center justify-center w-full bg-gray-100 text-sm text-gray-500
   }
   .bottom-menu li{
-    @apply text-center mx-auto justify-center flex-grow hover:underline
+    @apply text-center mx-auto flex-grow hover:underline
   }
   
   @media screen(sm){
     .bottom-menu{
       @apply flex-nowrap
+    }
+    .bottom-menu li{
+      @apply text-start border-red-500
+    }
+    .bottom-menu:last-child li{
+      @apply text-right
     }
   }
 }

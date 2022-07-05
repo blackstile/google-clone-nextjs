@@ -3,7 +3,7 @@ import React from 'react';
 function VoiceSearchButton() {
   return (
     <svg
-      className="w-6 h-6 cursor-pointer"
+      className="w-6 h-6 cursor-pointer hidden sm:block"
       focusable="false"
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"

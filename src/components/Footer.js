@@ -24,7 +24,7 @@ function Footer() {
             </a>
           </li>
         </ul>
-        <span className="hidden md:flex text-sm">
+        <span className="hidden md:flex text-sm text-blue-500">
           Google Clone Copytright &copy; {new Date().getFullYear()}
         </span>
         <ul className="bottom-menu">
