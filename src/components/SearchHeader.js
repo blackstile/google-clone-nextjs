@@ -14,7 +14,7 @@ function SearchHeader() {
   return (
     <header className="sticky top-0 flex flex-col border-b-[1px] mt-3 sm:mt-6">
       <div className="w-full sm:flex">
-        <div className="flex items-center justify-between mx-[5%] mb-3 sm:mx-auto sm:mb-0">
+        <div className="flex flex-shrink-0 items-center justify-between mx-[5%] mb-3 sm:mx-auto sm:mb-0">
           <MenuIcon className="w-6 h-6 sm:hidden" />
           <div className="cursor-pointer text-center sm:text-left border-red-500 sm:mt-3 sm:px-6 sm:pr-10 max-w-[180px] sm:max-h-[160px] sm:max-w-[300px]">
             <Image
@@ -32,12 +32,20 @@ function SearchHeader() {
         <div className="hidden sm:flex space-x-3 flex-grow justify-end pr-8">
           <ConfigurationButton />
           <ApplicationsButton />
-          <User />
+          <User className="hidden sm:flex" />
         </div>
       </div>
       <div className="flex space-x-6 mt-5 sm:ml-40 justify-evenly sm:justify-start">
-        <SearchTypeButton iconName="SearchIcon" label="Todas" active={true} />
-        <SearchTypeButton iconName="PhotographIcon" label="Imagens" />
+        <SearchTypeButton
+          iconName="SearchIcon"
+          label="Todas"
+          active={!router.query.searchType || router.query.searchType === ''}
+        />
+        <SearchTypeButton
+          iconName="PhotographIcon"
+          label="Imagens"
+          active={router.query.searchType === 'image'}
+        />
       </div>
     </header>
   );

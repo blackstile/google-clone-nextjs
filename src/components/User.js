@@ -7,7 +7,7 @@ function User({ className }) {
     return (
       <>
         <div
-          className={`${className} relative cursor-pointer items-center justify-center flex`}
+          className={`relative cursor-pointer items-center justify-center flex ${className}`}
           onClick={signOut}
         >
           <div className="absolute z-10">
@@ -54,7 +54,7 @@ function User({ className }) {
   return (
     <>
       <button
-        className="bg-blue-500 text-white px-6 py-2 font-medium rounded-md hover:brightness-110 hover:shadow-md"
+        className={`bg-blue-500 text-white px-6 py-2 max-h-10 font-medium rounded-md hover:brightness-110 hover:shadow-md ${className}`}
         onClick={signIn}
       >
         Sign in
