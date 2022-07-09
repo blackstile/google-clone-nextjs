@@ -12,7 +12,7 @@ function SearchHeader() {
   const router = useRouter();
 
   return (
-    <header className="sticky top-0 flex flex-col border-b-[1px] mt-3 sm:mt-6">
+    <header className="sticky top-0 bg-white flex flex-col border-b-[1px] pt-3 sm:pt-6">
       <div className="w-full sm:flex">
         <div className="flex flex-shrink-0 items-center justify-between mx-[5%] mb-3 sm:mx-auto sm:mb-0">
           <MenuIcon className="w-6 h-6 sm:hidden" />
