@@ -31,8 +31,8 @@ export default function Home() {
       <Header />
 
       {/* Body */}
-      <form className="flex flex-col items-center justify-center w-[100vw] h-[60vh] sm:h-[40vh]">
-        <div className="w-1/2 h-16 sm:h-20 sm:w-[300px]">
+      <form className="flex flex-col items-center justify-center w-[100vw] h-[60vh] sm:h-[45vh]">
+        <div className="w-1/2 h-16 sm:h-20 sm:w-[272px]">
           <Image
             // objectFit="contain"
             layout="responsive"
@@ -42,7 +42,7 @@ export default function Home() {
             alt="Google Logo"
           />
         </div>
-        <div className="rounded-full items-center sm:max-w-xl lg:max-w-xl flex w-full mt-5 sm:mt-12 mx-auto max-w-[90%] border border-gray-200 hover:shadow-md focus-within:shadow-md px-5 py-3">
+        <div className="rounded-full items-center sm:max-w-xl lg:max-w-xl flex w-full mt-5 sm:mt-10 mx-auto max-w-[90%] border border-gray-200 hover:shadow-md focus-within:shadow-md px-5 py-3">
           <SearchIcon className="w-6 h-6 text-gray-500 mr-3" />
 
           <input

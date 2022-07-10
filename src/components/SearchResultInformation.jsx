@@ -4,7 +4,7 @@ function SearchResultInformation({ results }) {
   };
   const { totalResults, formattedSearchTime } = results.searchInformation;
   return (
-    <div className="text-gray-400 text-sm font-google-sans mt-2 mb-4">
+    <div className="hidden sm:block text-gray-400 text-sm font-google-sans mt-2 mb-4">
       {`Aproximadamente ${formatResult(
         totalResults
       )} resultados (${formattedSearchTime.replace('.', ',')} segundos)`}

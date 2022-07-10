@@ -22,6 +22,54 @@
   .bottom-menu li{
     @apply text-center mx-auto flex-grow hover:underline
   }
+
+  .first-google-page{
+    background: url(/nav_logo321.webp) no-repeat;
+    background-position: -24px 0;
+    overflow: hidden;
+    width: 28px;
+    height:40px
+  }
+  .last-google-pagination{
+    background: url(/nav_logo321.webp) no-repeat;
+    background-position: -96px 0;
+    overflow: hidden;
+    width: 45px;
+    height:56px;
+  }
+  .previous-google-pagination{
+    background: url(/nav_logo321.webp) no-repeat;
+    background-position: 0 0;
+    width: 53px;
+    float: right;
+    overflow: hidden;
+    height:40px
+  }
+
+  .next-google-pagination{
+    background: url(/nav_logo321.webp) no-repeat;
+    background-position: -96px 0;
+    width: 71px;
+    overflow: hidden;
+    height:40px
+  }
+
+  .current-google-page{
+    background: url(/nav_logo321.webp) no-repeat;
+    background-position: -53px 0;
+    width: 20px;
+    overflow: hidden;
+    height:40px
+  }
+
+  .item-google-pagination{
+    background: url(/nav_logo321.webp) no-repeat;
+    background-position: -74px 0;
+    width: 20px;
+    overflow: hidden;
+    height:40px
+  }
+
   
   @media screen(sm){
     .bottom-menu{

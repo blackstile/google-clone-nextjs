@@ -1,8 +1,6 @@
-import React from 'react';
-
-function Footer() {
+function Footer({ className }) {
   return (
-    <footer className="footer">
+    <footer className={`footer ${className}`}>
       <div className="row-footer">
         <span>Brasil</span>
         <small>by William Miranda</small>
