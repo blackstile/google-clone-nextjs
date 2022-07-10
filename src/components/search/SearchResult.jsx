@@ -1,4 +1,4 @@
-import SearchPagination from './pagination/SearchPagination';
+import SearchPagination from '../pagination/SearchPagination';
 import SearchResultInformation from './SearchResultInformation';
 import SearchResultItem from './SearchResultItem';
 

@@ -1,10 +1,10 @@
 import React from 'react';
-import ApplicationsButton from './ApplicationsButton';
-import User from './User';
+import ApplicationsButton from '../ApplicationsButton';
+import User from '../User';
 import SearchTypeButton from './SearchTypeButton';
 import SearchInput from './SearchInput';
 import Image from 'next/image';
-import ConfigurationButton from './ConfigurationButton';
+import ConfigurationButton from '../ConfigurationButton';
 import { useRouter } from 'next/router';
 import { MenuIcon } from '@heroicons/react/outline';
 

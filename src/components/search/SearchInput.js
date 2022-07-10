@@ -1,7 +1,7 @@
 import { useRef, useState } from 'react';
 import { SearchIcon, XIcon } from '@heroicons/react/solid';
-import VoiceSearchButton from './VoiceSearchButton';
-import VirtualKeyboard from './VirtualKeyboard';
+import VoiceSearchButton from '../VoiceSearchButton';
+import VirtualKeyboard from '../VirtualKeyboard';
 import { useRouter } from 'next/router';
 
 function SearchInput() {
