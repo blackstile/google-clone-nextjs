@@ -10,13 +10,19 @@ import VirtualKeyboard from '../components/VirtualKeyboard';
 
 export default function Home() {
   const router = useRouter();
+  const isImage = router.query.searchType === 'image';
   const searchInputRef = useRef(null);
-  const search = function (event) {
+
+  const search = function (event, iamLucky) {
     event.preventDefault();
     const term = searchInputRef.current.value;
     if (!term.trim()) return;
-
-    router.push(`/search?term=${term.trim()}`);
+    const iamLuckParam = iamLucky ? '&iamLucky=true' : '';
+    router.push(
+      `/search?term=${term.trim()}${
+        isImage ? '&searchType=image' : ''
+      }${iamLuckParam}`
+    );
   };
   return (
     <div className="">
@@ -32,7 +38,7 @@ export default function Home() {
 
       {/* Body */}
       <form className="flex flex-col items-center justify-center w-[100vw] h-[60vh] sm:h-[45vh]">
-        <div className="w-1/2 h-16 sm:h-20 sm:w-[272px]">
+        <div className="relative w-1/2 h-16 sm:h-20 sm:w-[272px]">
           <Image
             // objectFit="contain"
             layout="responsive"
@@ -41,6 +47,13 @@ export default function Home() {
             height={92}
             alt="Google Logo"
           />
+          <span
+            className={`${
+              isImage ? 'flex' : 'hidden'
+            } absolute sm:bottom-[-15px] sm:right-[-5px] bottom-[-5px] right-[-15px] text-blue-600 text-sm sm:text-base font-arial"`}
+          >
+            Imagens
+          </span>
         </div>
         <div className="rounded-full items-center sm:max-w-xl lg:max-w-xl flex w-full mt-5 sm:mt-10 mx-auto max-w-[90%] border border-gray-200 hover:shadow-md focus-within:shadow-md px-5 py-3">
           <SearchIcon className="w-6 h-6 text-gray-500 mr-3" />
@@ -56,9 +69,16 @@ export default function Home() {
         </div>
         <div className="flex flex-col sm:flex-row w-[50%] space-y-2 mt-2 sm:mt-8 justify-center sm:space-x-4 sm:space-y-0">
           <button onClick={search} className="btn">
-            Pesquisa Google
+            <span className={isImage ? 'hidden' : 'block'}>
+              Pesquisa Google
+            </span>{' '}
+            <span className={isImage ? 'block' : 'hidden'}>
+              Pesquisa Imagens
+            </span>
           </button>
-          <button className="btn">Estou com Sorte</button>
+          <button className="btn" onClick={(e) => search(e, true)}>
+            Estou com Sorte
+          </button>
         </div>
       </form>
 

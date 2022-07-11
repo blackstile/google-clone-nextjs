@@ -6,14 +6,24 @@ import Response from '../SearchResponse';
 import { useRouter } from 'next/router';
 import ImageResponse from '../ImageSearchResponse';
 import ImageSearchResult from '../components/search/ImageSearchResult';
+import { useEffect } from 'react';
 
 export default function Search({ results }) {
   console.log(results);
   const router = useRouter();
-  const { term, searchType } = router.query;
+  const { term, searchType, iamLucky } = router.query;
   const isImageSearch = searchType === 'image';
-
-  return (
+  useEffect(() => {
+    if (iamLucky) {
+      let randomPosition = Math.round(Math.random() * 10);
+      window.location.href = results.items[randomPosition].link;
+    }
+  }, [results, iamLucky]);
+  return iamLucky ? (
+    <div className="w-screen h-screen flex text-center items-center justify-center text-lg text-blue-700">
+      Aguarde estamos sorteando um resultado
+    </div>
+  ) : (
     <div>
       <Head>
         <title>{`${term} - Pesquisa Google`}</title>
