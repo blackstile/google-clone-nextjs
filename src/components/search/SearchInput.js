@@ -8,7 +8,6 @@ function SearchInput() {
   const router = useRouter();
   const searchInputRef = useRef(null);
   const clearInputButtonRef = useRef(null);
-  const [searchTerm, setSearchTerm] = useState(router.query.term);
   const search = (event) => {
     if (event.type == 'click' || event.code.toLowerCase() === 'enter') {
       const term = searchInputRef.current.value;

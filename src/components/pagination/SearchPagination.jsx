@@ -4,6 +4,9 @@ import PaginationButton from './PaginationButton';
 import PreviousButtonPagination from './PreviousButtonPagination';
 
 function SearchPagination({ results }) {
+  if (!results.queries) {
+    return <></>;
+  }
   let { request, previousPage, nextPage } = results.queries;
   let { startIndex, count } = request[0];
   let page = startIndex === 1 ? 1 : Math.ceil(startIndex / count);

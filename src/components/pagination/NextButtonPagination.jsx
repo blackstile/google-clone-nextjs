@@ -18,7 +18,12 @@ function NextButtonPagination({ isLast, startIndex }) {
         href="#"
       >
         <span className={`self-start ${classButton}`}></span>
-        <span className="ml-[53px]">{isLast ? Parser('&nbsp;') : 'Mais'}</span>
+        <span className="sm:hidden ml-[53px] no-underline">
+          {Parser('&nbsp;')}
+        </span>
+        <span className="hidden sm:flex ml-[53px]">
+          {isLast ? Parser('&nbsp;') : 'Mais'}
+        </span>
       </a>
     </Link>
   );

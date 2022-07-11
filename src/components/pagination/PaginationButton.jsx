@@ -3,7 +3,6 @@ import { useRouter } from 'next/router';
 
 function PaginationButton({ pageNumber, currentPage, startIndex }) {
   const router = useRouter();
-  console.log('pageNumber: ', pageNumber, 'Current Page: ', currentPage);
   let isCurrentPage = pageNumber === currentPage;
   const searchType = router.query.searchType || '';
 

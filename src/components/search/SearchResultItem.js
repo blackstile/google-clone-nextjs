@@ -5,7 +5,9 @@ function SearchResultItem({ result, className }) {
   return (
     <div className={`mb-8 font-arial ${className}`}>
       <a className="group" href={result.link}>
-        <p className="text-sm truncate">{Parser(result.htmlFormattedUrl)}</p>
+        <p className="text-sm truncate">
+          {Parser(result.htmlFormattedUrl || result.link)}
+        </p>
         <p className=" group-hover:underline text-lg font-medium text-blue-800 visited:text-[#681da8] truncate">
           {Parser(result.htmlTitle)}
         </p>

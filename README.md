@@ -1,3 +1,15 @@
+## Google Programmable Search Engine Documentation
+
+https://developers.google.com/custom-search/docs/overview
+
+## Google Custom Search JSON API
+
+https://developers.google.com/custom-search/v1/reference/rest/v1/cse/list?apix_params=%7B%22cx%22%3A%222f67233efdd03c3fe%22%2C%22lr%22%3A%22lang_pt%22%2C%22num%22%3A10%2C%22q%22%3A%22nextjs%22%2C%22start%22%3A90%7D
+
+### JSON Api Limitation
+
+Note: The JSON API will never return more than 100 results, even if more than 100 documents match the query, so setting the sum of start + num to a number greater than 100 will produce an error. Also note that the maximum value for num is 10.
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started

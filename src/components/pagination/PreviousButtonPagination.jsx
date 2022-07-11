@@ -17,8 +17,11 @@ function PreviousButtonPagination({ isFirst, startIndex }) {
         className={`flex flex-col text-blue-700 hover:underline items-center justify-center`}
       >
         <span className={`self-end ${classButton}`}></span>
-        <span className="mr-[35px]">
+        <span className="hidden sm:flex mr-[35px]">
           {isFirst ? Parser('&nbsp;') : 'Anterior'}
+        </span>
+        <span className="sm:hidden mr-[35px] no-underline">
+          {Parser('&nbsp;')}
         </span>
       </a>
     </Link>
